@@ -2,7 +2,6 @@ import gym
 import numpy as np
 
 env = gym.make('MountainCar-v0')
-env.reset()
 
 # Q-Learning Settings
 LEARNING_RATE = 0.1 #can tweak later
@@ -21,10 +20,16 @@ q_table = np.random.uniform(low = -2, high = 0, size =(DISCRETE_OS_SIZE + [env.a
 #Starts randomly a Q-Table that is Every Combination for each action that is possible it is,
 # in this case, 20x20x3
 
-'''
 def get_discrete_state(current_state):
     discrete_state = (current_state - env.observation_space.low)/discrete_os_win_size
     return tuple(discrete_state.astype(np.int))
+
+discrete_state = get_discrete_state(env.reset()) #env.reset returns initial state
+print(discrete_state)
+
+print(q_table[discrete_state]) #starting Q-values
+
+print(np.argmax(q_table[discrete_state])) #Action tha has the max reward in the Q-Table
 '''
 done = False #sets finished state as False
 random_act = 2 #For this problem there is 3 actions, for example we initially choose 2
@@ -34,5 +39,5 @@ while not done:
     nu_state, reward, done, _ = env.step(action) 
     #print(reward, nu_state) 
     env.render() 
-
+'''
 env.close() 
