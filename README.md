@@ -2,6 +2,13 @@
 
 Some of my reinforcement learning projects and my coursera specialization assignments.
 
+# Table of Contents
+- [Alberta Specialization](/Alberta_Specialization)
+- [Introduction to RL Projects](/intro_projects)
+- [Author](#author)
+- [Support](#support)
+
+
 ## Author
 
 <a href="https://www.linkedin.com/in/jpvt/" target="_blank">**João Pedro Vasconcelos**</a>
